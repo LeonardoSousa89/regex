@@ -28,8 +28,8 @@ public class Main {
           
           int hex=0X10;
       
-          String regex="([a-zA-Z])+([2-9])+(\\.([a-zA-Z])+)";                   //somente proj a partir de 2
-          String texto="proj1.bkp, proj1.java, proj1.class, proj1final.java, proj2.bkp, proj3.java";
+          String regex="proj([^,])*";                   
+          String texto="proj1.bkp, proj1.java, proj1.class, proj1final.java, proj2.bkp, proj3.java, diagrama, texto, foto";
           
           System.out.println("Email válido?: " + "@3#adsa@asdas.br".matches(regex));
           System.out.println("Email válido?: " + "bicho@outlook.com".matches(regex));
