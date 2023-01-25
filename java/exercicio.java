@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 public class Main {
     public static void main(String[] args) throws Exception {
         
-          //https://www.youtube.com/watch?v=LfT1kT64cFQ&list=PL62G310vn6nHrMr1tFLNOYP_c73m6nAzL&index=94	
+          //meus exercicios de regex
         
           // \d - busca todos os digitos
           // \D - tudo o que não for digito
@@ -24,16 +24,16 @@ public class Main {
           // | significa ou como no operador relacional
           // $ fim da linha
           
-          int hex=0X10;
           
-          /* essa expressão quer dizer,
-		     deve conter a a z minúsculo e A a Z maiúsculo, seguido de underline,
-		     . ou traço uma ou mais vezes podendo haver repição, seguido de arroba e após deve conter a a z 
-		     minúsculo e A a Z maiúsculo um ou mais vezes podendo haver repição, seguido de ponto e após,
-		     deve conter a a z minúsculo e A a Z maiúsculo uma ou mais vezes podendo haver repição.
-		  */
-          String regex="([a-zA-z\\._-])+@([a-zA-z])+(\\.([a-zA-z])+)+";
-          String texto="@3#adsa@asdas.br gig._i@adfas.com mano@gmail.com, bicho@outlook.com, doido@hotmail.com, 104fm@ask.com 104fm@ask.com.br";
+          int hex=0X10;
+      
+        //   String regex="([a-zA-Z])+([0-9a-zA-z])+(\\.[a-zA-Z0-9]+)";         //pegue todos sem restrição
+        //   String regex="([a-zA-Z0-9])+([0-9a-zA-z])+(\\.([b][k][p])+)";      //somente arquivos .bkp
+        //   String regex="([a-zA-Z0-9])+([0-9a-zA-z])+(\\.([j][a][v][a])+)";   //somente arquivos .java
+        //   String regex="([\\.])+([c][l][a][s][s])";                          //somente o final .class
+        //   String regex="([p][r][o][j])+([0-1])+(\\.([a-zA-Z])+)";            //somente proj1
+          String regex="([a-zA-Z])+([2-9])+(\\.([a-zA-Z])+)";                   //somente proj a partir de 2
+          String texto="proj1.bkp, proj1.java, proj1.class, proj1final.java, proj2.bkp, proj3.java";
           
           System.out.println("Email válido?: " + "@3#adsa@asdas.br".matches(regex));
           System.out.println("Email válido?: " + "bicho@outlook.com".matches(regex));
